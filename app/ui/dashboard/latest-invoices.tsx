@@ -1,8 +1,8 @@
-import { ArrowPathIcon } from '@heroicons/react/24/outline';
-import clsx from 'clsx';
-import Image from 'next/image';
-import { lusitana } from '@/app/ui/fonts';
-export default async function LatestInvoices() {
+import { ArrowPathIcon } from "@heroicons/react/24/outline";
+import clsx from "clsx";
+import Image from "next/image";
+import { lusitana } from "@/app/ui/fonts";
+export default async function LatestInvoices({ latestInvoices }) {
   return (
     <div className="flex w-full flex-col md:col-span-4 lg:col-span-4">
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
@@ -15,10 +15,10 @@ export default async function LatestInvoices() {
               <div
                 key={invoice.id}
                 className={clsx(
-                  'flex flex-row items-center justify-between py-4',
+                  "flex flex-row items-center justify-between py-4",
                   {
-                    'border-t': i !== 0,
-                  },
+                    "border-t": i !== 0,
+                  }
                 )}
               >
                 <div className="flex items-center">
